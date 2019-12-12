@@ -14,7 +14,7 @@ import alpaca_trade_api as tradeapi
 key = 'FAKE_KEY'
 secret = 'FAKE_SECRET'
 base_url = 'https://paper-api.alpaca.markets'
-                               
+
 api = tradeapi.REST(key, secret, base_url, api_version='v2')
 account = api.get_account()
 print(account.status)
@@ -62,7 +62,7 @@ weightings['QQQ'] = (portfolio_value/2) / qqq_price
 print('weightings: ')
 print(weightings)
 
-for short_stock, diff in weightings:
+for short_stock in weightings.keys():
     qty = weightings[short_stock]
     side = 'sell'
     try:
