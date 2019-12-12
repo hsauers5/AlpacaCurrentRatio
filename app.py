@@ -66,7 +66,7 @@ for short_stock, diff in weightings:
     qty = weightings[short_stock]
     side = 'sell'
     try:
-        # api.submit_order(short_stock, qty, side, "market", "day")
+        api.submit_order(short_stock, qty, side, "market", "day")
         print("Market order of | " + str(qty) + " " + short_stock + " " + side + " | completed.")
     except:
         print("Order of | " + str(qty) + " " + short_stock + " " + side + " | did not go through.")
