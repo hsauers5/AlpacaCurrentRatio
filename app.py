@@ -4,7 +4,7 @@ import alpaca_trade_api
 
 tickers_list = []
 
-with open('nasdaq100.txt', 'r+') as tickers_file:
+with open('tickers.txt', 'r+') as tickers_file:
   tickers_list = tickers_file.read().splitlines()
 
 tenquant_key = 'FAKE_KEY'
